@@ -18,9 +18,9 @@ Run command
  cd temp
  ```
 
-#docker run -d image-id
-#docker container ls -a
-#docker logs container-id
+`docker run -d image-id`
+`docker container ls -a`
+`docker logs container-id`
 
 ### Step 2:
     if your don't have a ECR repository to store the Docker image so you need to do
@@ -76,7 +76,7 @@ Run command
 
 
 
-####Ref
+#### Ref
     https://docs.aws.amazon.com/cli/latest/reference/lambda/create-function.html
     https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-awscli.html
     https://docs.aws.amazon.com/cli/latest/reference/events/put-rule.html
