@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface ProcessService {
 
-    void processData(List<CsvModel> input);
+    List<CsvModel> processData(List<CsvModel> input);
 
 }
