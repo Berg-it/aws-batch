@@ -16,13 +16,14 @@ Run command
  cp target/aws-batch-1.0-SNAPSHOT.jar temp/
  cp Dockerfile temp/
  cd temp
+ docker build -t awsbatch/first_batch .
  ```
 
-```
-docker run -d image-id
-docker container ls -a
-docker logs container-id
-```
+ ```
+ docker run -d image-id
+ docker container ls -a
+ docker logs container-id
+ ```
 
 ### Step 2:
     if your don't have a ECR repository to store the Docker image so you need to do
