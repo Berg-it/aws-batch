@@ -76,14 +76,18 @@ docker logs container-id
         - Create bucket
             - aws s3api create-bucket --bucket my-batch1-bucket --create-bucket-configuration LocationConstraint=eu-central-1
 
-
+### Step 8
+    We need to add dynamoDb table where we will import transformed data
+        - aws dynamodb create-table  --table-name bank-transaction-proc --attribute-definitions AttributeName=Account_No,AttributeType=S 
+              --key-schema  AttributeName=Account_No,KeyType=HASH --provisioned-throughput ReadCapacityUnits=10,WriteCapacityUnits=5 
 
 #### Ref
    * [AWS CLI](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-awscli.html)
    * [AWS lambda CLI](https://docs.aws.amazon.com/cli/latest/reference/lambda/create-function.html)
    * [AWS Event](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html)
    * [AWS event put-rule CLI](https://docs.aws.amazon.com/cli/latest/reference/events/put-rule.html)
-   * [AWS event put-targetsCLI](https://docs.aws.amazon.com/cli/latest/reference/events/put-targets.html)
+   * [AWS event put-targets CLI](https://docs.aws.amazon.com/cli/latest/reference/events/put-targets.html)
+   * [AWS create dynamoDb Table CLI](https://docs.aws.amazon.com/cli/latest/reference/dynamodb/create-table.html)
 
 
 
